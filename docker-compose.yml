@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: bcb
+    ports:
+      - "5437:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql/create_table_postgres.sql:/docker-entrypoint-initdb.d/init.sql
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: YourStrong@Passw0rd
+      ACCEPT_EULA: "Y"
+      MSSQL_USER: admin
+      MSSQL_PASSWORD: admin
+    ports:
+      - "1435:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+      - ./sql/create_table_mssql.sql:/init.sql
+    command:
+      - /bin/sh
+      - -c
+      - |
+        /opt/mssql/bin/sqlservr &
+        sleep 30s &&
+        /opt/mssql-tools/bin/sqlcmd -S localhost -U admin -P admin -d master -i /init.sql
+
+volumes:
+  postgres-data:
+  sqlserver-data:

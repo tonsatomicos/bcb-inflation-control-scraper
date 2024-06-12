@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "python-project-startup-guide"
+version = "0.1.0"
+description = ""
+authors = ["Hubris"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.5"
+loguru = "^0.7.2"
+flake8 = "^7.0.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+taskipy = "^1.12.2"
+pre-commit = "^3.7.1"
+selenium = "^4.21.0"
+jupyter = "^1.0.0"
+pandas = "^2.2.2"
+lxml = "^5.2.2"
+sqlalchemy = "^2.0.30"
+psycopg2 = "^2.9.9"
+html5lib = "^1.1"
+retrying = "^1.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+format = """
+isort src/main.py && black src/main.py && flake8 src/main.py
+"""
