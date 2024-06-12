@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: bcb
+      POSTGRES_DB: BACEN
     ports:
       - "5437:5432"
     volumes:
@@ -15,26 +15,13 @@ services:
       - ./sql/create_table_postgres.sql:/docker-entrypoint-initdb.d/init.sql
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2017-latest
     container_name: sqlserver
     environment:
-      SA_PASSWORD: YourStrong@Passw0rd
-      ACCEPT_EULA: "Y"
-      MSSQL_USER: admin
-      MSSQL_PASSWORD: admin
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
     ports:
-      - "1435:1433"
+      - "5434:1433"
     volumes:
-      - sqlserver-data:/var/opt/mssql
-      - ./sql/create_table_mssql.sql:/init.sql
-    command:
-      - /bin/sh
-      - -c
-      - |
-        /opt/mssql/bin/sqlservr &
-        sleep 30s &&
-        /opt/mssql-tools/bin/sqlcmd -S localhost -U admin -P admin -d master -i /init.sql
-
-volumes:
-  postgres-data:
-  sqlserver-data:
+      - ./sql/create_table_mssql.sql:/scripts
+    command: /bin/bash -c "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pass@word -d master -i /scripts/create_database.sql"

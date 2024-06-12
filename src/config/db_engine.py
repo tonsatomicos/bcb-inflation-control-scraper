@@ -15,9 +15,9 @@ class DBEngine:
 
     def create_engine(self):
         if self.db_type == "postgresql":
-            db_url = f"postgresql://{self.db_user}:{self.db_pass}@{self.db_local}/{self.db_name}"
+            db_url = f"postgresql+psycopg2://{self.db_user}:{self.db_pass}@{self.db_local}/{self.db_name}"
         elif self.db_type == "sqlserver":
-            db_url = f"mssql+pyodbc://{self.db_user}:{self.db_pass}@{self.db_local}/{self.db_name}?driver=ODBC+Driver+17+for+SQL+Server"
+            db_url = f"mssql+pyodbc://{self.db_user}:{self.db_pass}@{self.db_local}/{self.db_name}?DRIVER={{ODBC Driver 17 for SQL Server}}"
         else:
             raise ValueError("Tipo de banco de dados não suportado")
 

@@ -1,6 +1,6 @@
-IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'bcb')
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'BACEN')
 BEGIN
-    CREATE DATABASE bcb;
+    CREATE DATABASE BACEN;
 END
 GO
 
