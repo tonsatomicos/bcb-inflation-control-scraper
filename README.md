@@ -87,7 +87,7 @@ python .\src\main.py
 
 ## Considerações Finais
 
-- A documentação pode não estar tão detalhada; talvez seja necessário um certo nível de conhecimento para adaptar o código.
+- A documentação pode não estar tão detalhada, talvez seja necessário um certo nível de conhecimento para adaptar o código.
 - Se tudo estiver configurado corretamente, basta executa o script e verificar a tabela no banco de dados usando o DBeaver ou outra ferramenta de sua preferencia.
 - Tentei aplicar os conceitos de SOLID nesse projeto, por isso a estrutura pode parecer uma pouco confusa.
 
