@@ -11,6 +11,10 @@ O desafio consistia em desenvolver um scraper no site de nossa escolha, extrair 
 
 Para realizar esse processo, utilizei o Selenium para a raspagem de dados, o pandas para transformação e o SQLAlchemy ORM para persistência em banco de dados. O SQLAlchemy controlou o modelo de dados e realizou insert e update conforme necessário.
 
+## Estrutura
+
+![Descrição da Imagem](https://raw.githubusercontent.com/tonsatomicos/bacen-interest-rate-history/56d81e62e62111fd9071648117c9e1221202ffa1/assets/estrutura.svg)
+
 ## Dependências do Projeto
 
 Este projeto foi desenvolvido utilizando Poetry e Pyenv para gerenciamento da versão do Python, ambientes virtuais e bibliotecas.
