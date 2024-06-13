@@ -12,8 +12,6 @@ class ETLProcessor(InterfaceETLProcessor):
         obj_data_transform: InterfaceDataTransform,
         obj_data_loader: InterfaceDataLoader,
     ):     
-        self.status = None
-        self.status_message = None 
         self.data_extracted = None
         self.obj_data_extractor = obj_data_extractor
         self.obj_data_transform = obj_data_transform
@@ -21,7 +19,7 @@ class ETLProcessor(InterfaceETLProcessor):
 
     @log_decorator
     def extract_data(self, url_extract: str, table_xpath: str):
-        self.data_extracted, self.status, self.status_message = self.obj_data_extractor.extract_data(
+        self.data_extracted = self.obj_data_extractor.extract_data(
             url_extract, table_xpath
         )
         return self.data_extracted

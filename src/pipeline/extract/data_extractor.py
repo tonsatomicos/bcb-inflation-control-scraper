@@ -10,8 +10,6 @@ from time import sleep
 class DataExtractor(InterfaceDataExtractor):
     def __init__(self, webdriver_config):
         self.webdriver_config = webdriver_config
-        self.status = None
-        self.status_message = None
 
     def extract_data(self, url_extract, table_xpath) -> pd.DataFrame:
         browser = self.webdriver_config.get_driver()
@@ -33,19 +31,11 @@ class DataExtractor(InterfaceDataExtractor):
                 table_html = xpath.get_attribute("outerHTML")
 
                 df = pd.read_html(StringIO(table_html))[0]
-        
-                self.status = True
-                return df, self.status, self.status_message
+                return df
 
             except Exception as e:
-                self.status = False
-                self.status_message = f"Erro na extração dos dados: {e}"
-                return pd.DataFrame(), self.status, self.status_message
+                raise ValueError(f"Erro na extração dos dados: {e}")
 
             finally:
                 if browser:
                     browser.quit()
-        else:
-            self.status = False
-            self.status_message = "Erro ao obter driver."
-            return pd.DataFrame(), self.status, self.status_message
