@@ -11,7 +11,7 @@ O desafio consistia em desenvolver um scraper no site de nossa escolha, extrair 
 
 Para realizar esse processo, utilizei o Selenium para a raspagem de dados, o pandas para transformação e o SQLAlchemy ORM para persistência em banco de dados. O SQLAlchemy controlou o modelo de dados e realizou insert e update conforme necessário.
 
-## Estrutura
+## Etapas
 
 ![Descrição da Imagem](https://github.com/tonsatomicos/bacen-interest-rate-history/blob/main/assets/estrutura.png?raw=true)
 
