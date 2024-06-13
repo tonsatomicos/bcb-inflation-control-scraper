@@ -69,7 +69,7 @@ No script principal, o <code>./src/main.py</code>, na linha 11 existe a criaçã
 
 A engine está adaptada para persistir os dados ou no Postgres ou no SQL Server, caso precise persistir em outros bancos, como MySQL, basta consultar a documentação do SQL Alchemy e adicionar uma nova opção na função <code>create_engine</code> existente no arquivo <code>./src/config/db_engine.py</code>.
 
-#### Utilizando Docker
+### Utilizando Docker
 
 Tenho preparado no arquivo <code>docker-compose.yml</code> um container Postgres e um container SQL Server, que cria automaticamente o banco e as tabelas, caso queira utilizar um deles, prossiga com o comando:
 <pre><code>docker-compose up -d</code></pre>
