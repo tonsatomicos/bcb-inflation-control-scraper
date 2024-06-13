@@ -55,7 +55,7 @@ O arquivo <code>./src/models/models.py</code> contém a definição da classe qu
 
 O script SQL disponibilizado em <code>./sql</code> inclui o esquema da tabela, com detalhes sobre os tipos de dados, chaves primárias e quaisquer restrições adicionais necessárias.
 
-#### Como usar?
+### Como usar?
 
 No script principal, o <code>./src/main.py</code>, na linha 11 existe a criação do objeto engine <code>db_engine = DBEngine("sqlserver", "localhost:5434", "sa", "Teste!1234", "BACEN")</code>, basta configurar na ordem:
 
@@ -65,16 +65,16 @@ No script principal, o <code>./src/main.py</code>, na linha 11 existe a criaçã
 - Senha
 - Database
 
-#### Qual banco usar?
+### Qual banco usar?
 
 A engine está adaptada para persistir os dados ou no Postgres ou no SQL Server, caso precise persistir em outros bancos, como MySQL, basta consultar a documentação do SQL Alchemy e adicionar uma nova opção na função <code>create_engine</code> existente no arquivo <code>./src/config/db_engine.py</code>.
 
-##### Utilizando Docker
+#### Utilizando Docker
 
 Tenho preparado no arquivo <code>docker-compose.yml</code> um container Postgres e um container SQL Server, que cria automaticamente o banco e as tabelas, caso queira utilizar um deles, prossiga com o comando:
 <pre><code>docker-compose up -d</code></pre>
 
-#### Conclusão
+### Conclusão
 
 Após realizar essa primeira configuração, o projeto está pronto para ser executado. Ele pode facilmente persistir em qualquer banco de dados relacional, desde que a Engine esteja configurada corretamente. Isso oferece uma ampla flexibilidade para adaptar o projeto a diferentes ambientes e requisitos de armazenamento de dados.
 
