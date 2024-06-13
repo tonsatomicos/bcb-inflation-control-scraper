@@ -15,6 +15,7 @@ Para realizar esse processo, utilizei o Selenium para a raspagem de dados, o pan
 
 ![Descrição da Imagem](https://github.com/tonsatomicos/bacen-interest-rate-history/blob/main/assets/estrutura.png?raw=true)
 
+
 ## Dependências do Projeto
 
 Este projeto foi desenvolvido utilizando Poetry e Pyenv para gerenciamento da versão do Python, ambientes virtuais e bibliotecas.
