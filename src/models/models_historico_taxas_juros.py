@@ -6,7 +6,7 @@ Base = declarative_base()
 class HistoricoTaxasJuros(Base):
     __tablename__ = 'historico_taxas_juros'
 
-    num_reuniao = Column(Integer, primary_key=True)
+    num_reuniao = Column(Integer, primary_key=True, autoincrement=False)
     data_reuniao = Column(String(15), nullable=False)
     vies_reuniao = Column(String(50),nullable=True)
     meta_selic = Column(DECIMAL(10, 1), nullable=True)

@@ -18,10 +18,12 @@ services:
     image: mcr.microsoft.com/mssql/server:2017-latest
     container_name: sqlserver
     environment:
-      - SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Teste!1234
       - ACCEPT_EULA=Y
     ports:
       - "5434:1433"
     volumes:
-      - ./sql/create_table_mssql.sql:/scripts
-    command: /bin/bash -c "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pass@word -d master -i /scripts/create_database.sql"
+      - ./sql/create_table_mssql.sql:/create_table_mssql.sql
+
+volumes:
+  postgres-data:
