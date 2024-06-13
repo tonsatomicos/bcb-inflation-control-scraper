@@ -4,7 +4,7 @@ BEGIN
 END
 GO
 
-USE bcb;
+USE BACEN;
 GO
 
 CREATE TABLE historico_taxas_juros (
