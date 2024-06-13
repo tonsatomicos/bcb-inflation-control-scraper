@@ -11,7 +11,7 @@ class ETLProcessor(InterfaceETLProcessor):
         obj_data_extractor: InterfaceDataExtractor,
         obj_data_transform: InterfaceDataTransform,
         obj_data_loader: InterfaceDataLoader,
-    ):     
+    ):
         self.data_extracted = None
         self.obj_data_extractor = obj_data_extractor
         self.obj_data_transform = obj_data_transform
@@ -30,14 +30,16 @@ class ETLProcessor(InterfaceETLProcessor):
             self.data_extracted
         )
         return self.data_extracted
-    
+
     @log_decorator
     def load_data(self):
         self.obj_data_loader.load_data(self.data_extracted)
 
-    def get_status(self):
-        if self.status == True:
-            print("Dados extraídos com sucesso.")
-        else:
-            print(f"Falha ao extrair dados: {self.status_message}")
-
+    def run_etl(self, url_extract: str, table_xpath: str):
+        try:
+            self.extract_data(url_extract, table_xpath)
+            if self.data_extracted is not None and not self.data_extracted.empty:
+                self.transform_data()
+                self.load_data()
+        except Exception as e:
+            raise ValueError(f"Erro no processo ETL: {e}")
