@@ -17,13 +17,13 @@ def main():
     url_extract = "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros"
     table_xpath = "/html/body/app-root/app-root/div/div/main/dynamic-comp/div/div/bcb-histtaxajuros/div[1]/table"
 
-    etl_batch = ETLProcessor(
+    etl_batch_scraper = ETLProcessor(
         obj_data_extractor=obj_data_extractor,
         obj_data_transform=obj_data_transform,
         obj_data_loader=obj_data_loader,
     )
 
-    etl_batch.run_etl(url_extract=url_extract, table_xpath=table_xpath)
+    etl_batch_scraper.run_etl(url_extract=url_extract, table_xpath=table_xpath)
 
 
 if __name__ == "__main__":
