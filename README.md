@@ -13,7 +13,7 @@ Para realizar esse processo, utilizei o Selenium para a raspagem de dados, o pan
 
 ## Etapas
 
-![Descrição da Imagem](https://github.com/tonsatomicos/bacen-interest-rate-history/blob/main/assets/estrutura.png?raw=true)
+![Descrição da Imagem](https://raw.githubusercontent.com/tonsatomicos/bacen-interest-rate-history/38f08a6fe3ccfe0a3fbd0262fb20262cbf0f32d3/assets/estrutura.svg)
 
 
 ## Dependências do Projeto
