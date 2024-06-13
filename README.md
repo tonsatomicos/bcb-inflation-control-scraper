@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ## Configurações do Projeto
 
-O arquivo <code>./src/models/models.py</code> contém a definição da classe que representa a tabela do banco de dados, ou seja, a classe para armazenar o histórico de taxas de juros do BACEN, com os campos necessários para cada registro. Aqui eu aponto para a tabela historico_juros_taxas, mude se necessário.
+O arquivo <code>./src/models/models.py</code> contém a definição da classe que representa a tabela do banco de dados, ou seja, a classe que mapeia a tabela onde os dados serão persistidos, com os campos necessários para cada registro. Neste caso, a classe está mapeada para a tabela <code>historico_juros_taxas</code>. Caso seja necessário, você pode alterar para outra tabela conforme a necessidade do projeto.
 
 O script SQL disponibilizado em <code>./sql</code> inclui o esquema da tabela, com detalhes sobre os tipos de dados, chaves primárias e quaisquer restrições adicionais necessárias.
 
