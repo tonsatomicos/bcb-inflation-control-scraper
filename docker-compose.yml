@@ -24,6 +24,7 @@ services:
       - "5434:1433"
     volumes:
       - ./sql/create_table_mssql.sql:/create_table_mssql.sql
-
+      - ./sql/entrypoint.sh:/entrypoint.sh
+    entrypoint: /entrypoint.sh
 volumes:
   postgres-data:
