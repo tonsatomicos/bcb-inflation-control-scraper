@@ -27,4 +27,3 @@ etl_batch.extract_data(
 etl_batch.transform_data()
 etl_batch.load_data()
 
-etl_batch.get_status()
