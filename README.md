@@ -36,6 +36,7 @@ Este projeto foi desenvolvido utilizando Poetry e Pyenv para gerenciamento da ve
 - psycopg2
 - html5lib
 - pyodbc
+- matplotlib
 
 ### Instalação das Dependências
 
@@ -79,6 +80,8 @@ A engine está adaptada para persistir os dados ou no Postgres ou no SQL Server,
 Tenho preparado no arquivo <code>docker-compose.yml</code> um container Postgres e um container SQL Server, que cria automaticamente o banco e as tabelas, caso queira utilizar um deles, prossiga com o comando:
 <pre><code>docker-compose up -d</code></pre>
 
+Lembre-se de verificar o usuário e a senha dos bancos de dados no arquivo <code>docker-compose.yml</code>.
+
 ### Conclusão
 
 Após realizar essa primeira configuração, o projeto está pronto para ser executado. Ele pode facilmente persistir em qualquer banco de dados relacional, desde que a Engine esteja configurada corretamente. Isso oferece uma ampla flexibilidade para adaptar o projeto a diferentes ambientes e requisitos de armazenamento de dados.
@@ -95,7 +98,7 @@ python .\src\main.py
 - A documentação pode não estar tão detalhada, talvez seja necessário um certo nível de conhecimento para adaptar o código.
 - Se tudo estiver configurado corretamente, basta executa o script e verificar a tabela no banco de dados usando o DBeaver ou outra ferramenta de sua preferencia.
 - Tentei aplicar os conceitos de SOLID nesse projeto, por isso a estrutura pode parecer uma pouco confusa.
-
+- Disponibilizei na pasta <code>./src/notebooks</code> um notebook chamado <code>data_analysis.py</code>, onde recupero os dados inseridos e faço uma análise da evolução da meta Selic ao longo do tempo.
 <hr>
 
 ![Image](https://i.imgur.com/p4vnGAN.gif)

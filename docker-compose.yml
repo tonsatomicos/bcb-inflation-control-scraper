@@ -5,8 +5,8 @@ services:
     image: postgres:13
     container_name: postgres
     environment:
-      POSTGRES_USER: sa
-      POSTGRES_PASSWORD: Teste!1234
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
       POSTGRES_DB: BACEN
     ports:
       - "5437:5432"

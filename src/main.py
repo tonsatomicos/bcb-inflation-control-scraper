@@ -9,7 +9,7 @@ from pipeline.load.data_loader import DataLoader
 def main():
     webdriver_config = WebDriverConfig()
     # postgresql or sqlserver >
-    db_engine = DBEngine("postgresql", "localhost:5434", "sa", "Teste!1234", "BACEN")
+    db_engine = DBEngine("postgresql", "localhost:5437", "admin", "admin", "BACEN")
 
     obj_data_extractor = DataExtractor(webdriver_config=webdriver_config)
     obj_data_transform = DataTransform()
