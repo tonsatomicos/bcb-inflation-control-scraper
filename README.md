@@ -5,7 +5,7 @@
 <img src="http://img.shields.io/static/v1?label=STATUS&message=N/A&color=GREEN&style=for-the-badge"/>
 </p>
 
-Este projeto foi desenvolvido como parte de um desafio durante a disciplina de Web Mining & Crawler Scraping no curso de pós-graduação em Engenharia de Dados na Universidade de Fortaleza (Unifor).
+Este projeto foi concebido como parte de um desafio durante a disciplina de Web Mining & Crawler Scraping, no curso de pós-graduação em Engenharia de Dados, na Universidade de Fortaleza (Unifor).
 
 O desafio consistia em desenvolver um scraper no site de nossa escolha, extrair e retornar os dados. Optei por raspar o histórico de taxas de juros do BACEN.
 
