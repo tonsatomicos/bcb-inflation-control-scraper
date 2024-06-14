@@ -98,7 +98,7 @@ python .\src\main.py
 - A documentação pode não estar tão detalhada, talvez seja necessário um certo nível de conhecimento para adaptar o código.
 - Se tudo estiver configurado corretamente, basta executa o script e verificar a tabela no banco de dados usando o DBeaver ou outra ferramenta de sua preferencia.
 - Tentei aplicar os conceitos de SOLID nesse projeto, por isso a estrutura pode parecer uma pouco confusa.
-- Disponibilizei na pasta <code>./src/notebooks</code> um notebook chamado <code>data_analysis.py</code>, onde recupero os dados inseridos e faço uma análise da evolução da meta Selic ao longo do tempo.
+- Disponibilizei na pasta <code>./src/notebooks</code> um jupyter notebook chamado <code>data_analysis.ipynb</code>, onde recupero os dados inseridos e faço uma análise da evolução da meta Selic ao longo do tempo.
 <hr>
 
 ![Image](https://i.imgur.com/p4vnGAN.gif)
