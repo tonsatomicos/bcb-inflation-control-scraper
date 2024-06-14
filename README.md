@@ -63,7 +63,7 @@ O script SQL disponibilizado em <code>./sql</code> inclui o esquema da tabela, c
 
 ### Como usar?
 
-No script principal, o <code>./src/main.py</code>, na linha 11 existe a criação do objeto engine <code>db_engine = DBEngine("sqlserver", "localhost:5434", "sa", "Teste!1234", "BACEN")</code>, basta configurar na ordem:
+No script principal, o <code>./src/main.py</code>, na linha 12 existe a criação do objeto engine <code>db_engine = DBEngine("sqlserver", "localhost:5434", "sa", "Teste!1234", "BACEN")</code>, basta configurar na ordem:
 
 - Banco para persistência(Postgres, SQL Server, MySQL etc)
 - IP do banco
